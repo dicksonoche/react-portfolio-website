@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap-trial'
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoS from '../../../assets/images/logo-s.png'
+// eslint-disable-next-line no-unused-vars
+import LogoS from '../../../assets/images/logo.png'
 import './index.scss'
 
 const Logo = () => {
@@ -38,12 +39,12 @@ const Logo = () => {
 
   return (
     <div className="logo-container" ref={bgRef}>
-      <img
+      {/*<img
         className="solid-logo"
         ref={solidLogoRef}
         src={LogoS}
         alt="JavaScript,  Developer"
-      />
+  />*/}
 
       <svg
         width="559pt"

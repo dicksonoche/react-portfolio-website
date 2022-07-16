@@ -9,35 +9,37 @@
   }
 
   h1 {
-    color: #fff;
-    font-size: 56px;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
     line-height: 53px;
     margin: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
 
     &:before {
-      content: '<h1>';
+      content: '@Dickson_oche';
       font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
+      color: #2255ff;
       font-size: 18px;
+      font-weight: 700;
       position: absolute;
       margin-top: -40px;
       left: -15px;
       opacity: 0.6;
     }
 
-    &:after {
-      content: '<h1/>';
+    /*&:after {
+      content: '@Dickson_oche';
       font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
+      color: #2255ff;
       font-size: 18px;
+      font-weight: 700;
       position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
+      margin-top: 150px;
+      margin-left: 350px;
       animation: fadeIn 1s 1.7s backwards;
       opacity: 0.6;
-    }
+    }*/
 
     img {
       margin-left: 20px;
@@ -50,32 +52,33 @@
   }
 
   h2 {
-    color: #8d8d8d;
+    color: rgb(255, 255, 255);
     margin-top: 20px;
-    font-weight: 400;
-    font-size: 11px;
+    font-weight: 600;
+    font-size: 13px;
     font-family: sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     animation: fadeIn 1s 1.8s backwards;
   }
 
   .flat-button {
-    color: #ffd700;
+    color: rgb(255, 255, 255);
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
     padding: 10px 18px;
-    border: 1px solid #ffd700;
-    margin-top: 25px;
+    border: 2px solid #2255ff;
+    border-radius: 5px;
+    margin: 25px 5px;
     float: left;
     animation: fadeInAnimation 1s 1.8s backwards;
     white-space: nowrap;
 
     &:hover {
-      background: #ffd700;
-      color: #333;
+      background: rgba(0, 0, 0, 0.185);
+      color: #fff;
     }
   }
 }

@@ -36,9 +36,10 @@
   input[type='email'] {
     width: 100%;
     border: 0;
-    background: #115173;
-    height: 50px;
-    font-size: 16px;
+    border-radius: 5px;
+    background: #53555c;
+    height: 30px;
+    font-size: 12px;
     color: #fff;
     padding: 0 20px;
     box-sizing: border-box;
@@ -47,9 +48,10 @@
   textarea {
     width: 100%;
     border: 0;
-    background: #115173;
+    border-radius: 5px;
+    background: #53555c;
     height: 50px;
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -57,12 +59,12 @@
   }
 
   .flat-button {
-    color: #ffd700;
+    color: #2255ff;
     font-size: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #ffd700;
+    border: 1px solid #2255ff;
     float: left;
     border-radius: 4px;
     background: 0 0;
@@ -110,7 +112,7 @@
     font-size: 16px;
 
     span {
-      color: #ffd700;
+      color: #2255ff;
     }
   }
 }

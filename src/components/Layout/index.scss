@@ -10,17 +10,14 @@
 }
 
 .tags {
-  color: #ffd700;
+  color: gray;
   opacity: 0.6;
   position: absolute;
   bottom: 0;
   left: 120px;
   font-size: 18px;
+  font-weight: 700;
   font-family: 'La Belle Aurore', cursive;
-}
-
-.bottom-tag-html {
-  margin-left: -20px;
 }
 
 .container {
@@ -53,7 +50,7 @@
     h1 {
       font-size: 53px;
       font-family: 'Coolvetica';
-      color: #ffd700;
+      color: gray;
       font-weight: 400;
       margin-top: 0;
       position: relative;
@@ -61,28 +58,15 @@
       left: -10px;
 
       &:before {
-        content: '<h1>';
+        content: '@Dickson_oche';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: #2255ff;
         font-size: 18px;
         position: absolute;
         margin-top: -10px;
         left: -10px;
-        opacity: 0.6;
+        opacity: 0.75;
         line-height: 18px;
-      }
-
-      &:after {
-        content: '<h1/>';
-        font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
-        font-size: 18px;
-        line-height: 18px;
-        position: absolute;
-        left: -30px;
-        bottom: -20px;
-        margin-left: 20px;
-        opacity: 0.6;
       }
     }
 
