@@ -1,7 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import { Center, Loader } from '@mantine/core'
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { BallTriangle } from  'react-loader-spinner'
 
 const Experience = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -15,13 +18,16 @@ const Experience = () => {
   }, [])
   return (
     <>
-      <div className="container about-page">
-          {
-            isPending &&
         <Center style={{ height: "80vh", width: "100%" }}>
-            <Loader variant="dots" color="#2255ff" size="lg" />
+            <BallTriangle style={{ animation: "fadeOut 1s 1s" }}
+                height="80"
+                width="80"
+                color='grey'
+                ariaLabel='loading'
+                />
+            {/*<Loader variant="dots" color="#2255ff" size="lg" />*/}
         </Center>
-        }
+      <div className="container about-page">
         <div className="text-zone">
           <h1>
             <AnimatedLetters
