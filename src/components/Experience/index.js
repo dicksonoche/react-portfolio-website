@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { Center, Loader } from '@mantine/core'
+import { Center } from '@mantine/core'
 import React, { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
@@ -16,16 +15,26 @@ const Experience = () => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
+
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+      setTimeout(() => {
+          setIsLoading(false);
+      }, 1500);
+  })
+
   return (
     <>
         <Center style={{ height: "80vh", width: "100%" }}>
+        {isLoading===true?
             <BallTriangle style={{ animation: "fadeOut 1s 1s" }}
                 height="80"
                 width="80"
                 color='grey'
                 ariaLabel='loading'
-                />
-            {/*<Loader variant="dots" color="#2255ff" size="lg" />*/}
+                timeout={1500}
+            />: null
+        }
         </Center>
       <div className="container about-page">
         <div className="text-zone">

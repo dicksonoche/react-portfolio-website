@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { BallTriangle } from 'react-loader-spinner'
+import { Center } from '@mantine/core'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -37,8 +39,26 @@ const Contact = () => {
       )
   }
 
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+      setTimeout(() => {
+          setIsLoading(false);
+      }, 1500);
+  })
+
   return (
     <>
+      <Center style={{ height: "80vh", width: "100%" }}>
+        {isLoading===true?
+          <BallTriangle style={{ animation: "fadeOut 1s 1s" }}
+              height="80"
+              width="80"
+              color='grey'
+              ariaLabel='loading'
+              timeout={2500}
+          />: null
+        }
+      </Center>
       <div className="container contact-page">
         <div className="text-zone">
           <h1>
@@ -107,7 +127,6 @@ const Contact = () => {
           </MapContainer>
         </div>
       </div>
-      <Loader type="pacman" />
     </>
   )
 }

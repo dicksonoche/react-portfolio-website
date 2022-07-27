@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 //import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse"
 import { Link } from 'react-router-dom'
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import LogoTitle from '../../assets/images/logo.png'
 import one from '../../assets/images/1.png'
@@ -16,6 +15,9 @@ import nine from '../../assets/images/9.png'
 import ten from '../../assets/images/10.png'
 import Logo from './Logo'
 import './index.scss'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { Center } from '@mantine/core'
+import { BallTriangle } from 'react-loader-spinner'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -44,8 +46,26 @@ const Home = () => {
     }, 4000)
   }, [])
 
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+      setTimeout(() => {
+          setIsLoading(false);
+      }, 1500);
+  })
+
   return (
     <>
+      <Center style={{ height: "80vh", width: "100%" }}>
+        {isLoading===true?
+            <BallTriangle style={{ animation: "fadeOut 1s 1s" }}
+                height="80"
+                width="80"
+                color='grey'
+                ariaLabel='loading'
+                timeout={2500}
+            />: null
+        }
+        </Center>
       <div className="container home-page">
         <div className="text-zone">
           <h1>
@@ -95,7 +115,6 @@ const Home = () => {
           </MouseParallaxChild>*/}
       </div>
 
-      <Loader type="pacman" />
     </>
   )
 }

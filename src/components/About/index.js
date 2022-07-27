@@ -7,10 +7,12 @@ import {
   faJsSquare,
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { BallTriangle } from  'react-loader-spinner'
+import { Center } from '@mantine/core'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -21,8 +23,26 @@ const About = () => {
     }, 3000)
   }, [])
 
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+      setTimeout(() => {
+          setIsLoading(false);
+      }, 1500);
+  })
+
   return (
     <>
+      <Center style={{ height: "80vh", width: "100%" }}>
+        {isLoading===true?
+          <BallTriangle style={{ animation: "fadeOut 1s 1s" }}
+              height="80"
+              width="80"
+              color='grey'
+              ariaLabel='loading'
+              timeout={2500}
+          />: null
+        }
+      </Center>
       <div className="container about-page">
         <div className="text-zone">
           <h1>
@@ -71,7 +91,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
     </>
   )
 }
