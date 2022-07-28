@@ -46,7 +46,7 @@ const Experience = () => {
             />
           </h1>
           <p style={{color: '#fff'}}>
-            I'm very ambitious front-end developer looking for a role in
+            I'm an ambitious front-end developer looking for a role in
             established IT company with the opportunity to work with the latest
             technologies on challenging and diverse projects.
           </p>
